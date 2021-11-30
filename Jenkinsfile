@@ -5,7 +5,7 @@ pipeline {
       parallel {
         stage('Git CheckOut') {
           steps {
-            git(url: 'https://github.com/oralabuser/BlueOcean_Pipeline.git', branch: 'main')
+            git(url: 'https://github.com/iomegak12/BlueOcean_Pipeline', branch: 'main')
             echo 'Successfully Checkout from GitHub!!'
           }
         }
