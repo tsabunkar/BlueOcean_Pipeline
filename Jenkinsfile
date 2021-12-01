@@ -16,6 +16,12 @@ pipeline {
           }
         }
 
+        stage('StageX') {
+          steps {
+            echo 'This message is being printed due to the changed in Jenkins Dashboard'
+          }
+        }
+
       }
     }
 
