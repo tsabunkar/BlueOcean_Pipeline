@@ -26,9 +26,20 @@ pipeline {
     }
 
     stage('Compile') {
-      steps {
-        sh 'bash Compile.sh'
-        echo 'Compiled Successfully!!'
+      parallel {
+        stage('Compile') {
+          steps {
+            sh 'bash Compile.sh'
+            echo 'Compiled Successfully!!'
+          }
+        }
+
+        stage('Tejas-Stage') {
+          steps {
+            echo 'Hello From Jenkins'
+          }
+        }
+
       }
     }
 
